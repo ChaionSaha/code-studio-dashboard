@@ -7,5 +7,185 @@
 		<title>Code Studio Dashboard</title>
 		<script defer src="./js/index.js"></script>
 	</head>
-	<body></body>
+	<body class="min-h-screen bg-base-300">
+		<div class="container flex mx-auto">
+			<!-- Sidebar  -->
+			<div
+				class="z-[100] bg-base-100 flex xl:px-5 duration-150 flex-col items-center w-full translate-x-[-100%] xl:translate-x-0 absolute xl:relative min-h-screen py-5 xl:w-[20%] gap-y-10"
+				id="sidebar"
+			>
+				<div class="relative flex justify-center w-full">
+					<img src="./img/logo.png" alt="" class="w-fit" />
+					<button
+						class="absolute right-[5%] btn btn-outline top-1/2 translate-y-[-50%] xl:hidden"
+						onclick="sidebarToggle()"
+					>
+						<i class="text-2xl text-base-200 hover:text-primary bi bi-x"></i>
+					</button>
+				</div>
+
+				<div class="flex flex-col gap-y-4 w-[80%] xl:w-[100%]">
+					<p
+						class="mb-5 text-sm text-center uppercase xl:mb-0 xl:text-left text-base-200"
+					>
+						Main menu
+					</p>
+					<a href="./index.html" class="sidebar-link active-sidebar-link">
+						<i class="bi bi-house"></i>
+						Dashboard</a
+					>
+					<a class="sidebar-link">
+						<i class="bi bi-globe"></i>
+						Gallery</a
+					>
+					<a class="sidebar-link">
+						<i class="bi bi-people"></i>
+						Team</a
+					>
+
+					<a class="sidebar-link">
+						<i class="bi bi-file-earmark-text"></i>
+						Testimonial</a
+					>
+					<a class="sidebar-link">
+						<i class="bi bi-film"></i>
+						Video</a
+					>
+					<a class="sidebar-link">
+						<i class="bi bi-box"></i>
+						Portfolio</a
+					>
+
+					<a href="" class="mt-5 sidebar-link hover:bg-red-600">
+						<i class="text-xl bi bi-box-arrow-right"></i>
+						Log Out</a
+					>
+				</div>
+			</div>
+
+			<!-- Main body section -->
+			<div
+				class="flex flex-col w-full overflow-y-auto xl:px-0 xl:w-[80%] bg-base-300"
+			>
+				<!-- header name section -->
+				<div
+					class="flex flex-col justify-between py-5 border-b gap-y-5 lg:flex-row px-7 bg-base-100"
+				>
+					<div class="flex justify-between items-center">
+						<h2 class="text-2xl font-extrabold">Team</h2>
+
+						<button class="btn btn-outline xl:hidden" onclick="sidebarToggle()">
+							<i class="text-2xl text-base-200 bi bi-list"></i>
+						</button>
+					</div>
+
+					<div class="flex items-center gap-x-5">
+						<input
+							type="text"
+							class="input input-bordered"
+							placeholder="Search"
+						/>
+						<p class="text-3xl font-thin text-base-200">|</p>
+
+						<div class="flex text-2xl gap-x-5">
+							<button class="relative">
+								<i class="bi bi-chat-square-dots"></i>
+							</button>
+
+							<button class="relative">
+								<i class="bi bi-bell"></i>
+								<div class="notification-badge"></div>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- table section -->
+				<div class="flex flex-col mt-5 px-5 xl:px-10">
+					<button
+						class="btn xl:self-end border-success bg-transparent hover:bg-success hover:text-white text-base-200 normal-case"
+					>
+						Add Team
+						<i class="text-xl bi bi-plus"></i>
+					</button>
+
+					<div class="mt-10 bg-base-100 rounded-xl">
+						<div class="overflow-x-auto bg-base-100">
+							<table class="table table-lg border-[#d1d1d1]">
+								<!-- head -->
+								<thead>
+									<tr class="border-[#E9E7FD] uppercase">
+										<th>name</th>
+										<th>email address</th>
+										<th>phone number</th>
+										<th>created</th>
+										<th>action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="border-[#E9E7FD]">
+										<td class="h-full font-bold gap-x-2">
+											<img
+												class="inline-block me-2"
+												src="./img/Avatar.png"
+												alt=""
+											/>
+											Chaion
+										</td>
+										<td>chaion@gmail.com</td>
+										<td class="items-center">+880123456789</td>
+										<td>6 April, 2023</td>
+										<td class="text-base-200">
+											<a
+												class="btn hover:text-black btn-sm btn-outline lg:btn-ghost"
+											>
+												<i class="text-xl bi bi-pencil-square"></i>
+											</a>
+											<button
+												class="mt-2 btn hover:text-black btn-sm btn-outline lg:mt-0 lg:btn-ghost"
+											>
+												<i class="text-xl bi bi-lock"></i>
+											</button>
+											<button
+												class="mt-2 btn hover:text-black btn-sm btn-outline lg:mt-0 lg:btn-ghost"
+											>
+												<i class="text-xl bi bi-trash"></i>
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div
+							class="flex flex-col items-center justify-between p-5 mt-16 lg:flex-row gap-y-5"
+						>
+							<p class="flex items-center text-base-200 gap-x-2">
+								Showing
+								<select class="text-black select select-sm select-bordered">
+									<option>10</option>
+									<option>20</option>
+									<option>30</option>
+								</select>
+								of 50
+							</p>
+							<div class="join gap-x-1">
+								<button class="page">
+									<i class="bi bi-chevron-left"></i>
+								</button>
+								<button class="page page-active">1</button>
+								<button class="page">2</button>
+								<button class="page">3</button>
+								<button class="page">4</button>
+								<button class="page">
+									<i class="bi bi-chevron-right"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/index.js"></script>
+	</body>
 </html>

@@ -10,3 +10,30 @@
 *::after {
 	font-family: 'Public Sans', sans-serif;
 }
+
+.sidebar-link {
+	@apply flex items-center px-6 py-2 text-base duration-150 cursor-pointer gap-x-3 text-base-200 rounded-xl;
+	&:hover {
+		@apply text-white bg-primary;
+	}
+}
+
+.active-sidebar-link {
+	@apply text-white bg-primary rounded-xl;
+}
+
+.sidebar-show {
+	transform: translateX(0%);
+}
+
+.notification-badge {
+	@apply absolute bg-[#f00] top-[2%] right-0 h-2 w-2 rounded-full;
+}
+
+.page {
+	@apply duration-150 border-0 hover:bg-success hover:text-white btn bg-base-300 text-base-200;
+}
+
+.page-active {
+	@apply text-white bg-success;
+}
