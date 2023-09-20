@@ -30,7 +30,7 @@
 					>
 						Main menu
 					</p>
-					<a href="./index.html" class="sidebar-link active-sidebar-link">
+					<a href="./index.html" class="sidebar-link">
 						<i class="bi bi-house"></i>
 						Dashboard</a
 					>
@@ -38,7 +38,7 @@
 						<i class="bi bi-globe"></i>
 						Gallery</a
 					>
-					<a href="./Team.html" class="sidebar-link">
+					<a href="./Team.html" class="sidebar-link active-sidebar-link">
 						<i class="bi bi-people"></i>
 						Team</a
 					>
@@ -72,7 +72,7 @@
 					class="flex flex-col justify-between py-5 border-b gap-y-5 lg:flex-row px-7 bg-base-100"
 				>
 					<div class="flex items-center justify-between">
-						<h2 class="text-2xl font-extrabold">Dashboard</h2>
+						<h2 class="text-2xl font-extrabold">Add Team</h2>
 
 						<button class="btn btn-outline xl:hidden" onclick="sidebarToggle()">
 							<i class="text-2xl text-base-200 bi bi-list"></i>
@@ -100,12 +100,78 @@
 					</div>
 				</div>
 
-				<!-- table section -->
-				<div class="flex flex-col px-5 mt-10 xl:px-10">
-					<h1 class="text-3xl font-bold text-center xl:text-5xl">
-						Welcome to <span class="text-primary"> Code </span>
-						<span class="text-[#B31412]">Studio</span> Dashboard
-					</h1>
+				<div class="flex flex-col pb-10 mt-10 px-7">
+					<div class="grid gap-10 lg:grid-cols-2">
+						<div class="flex flex-col gap-y-2">
+							<label for="fullName" class="font-semibold">Full Name</label>
+							<input
+								type="text"
+								id="fullName"
+								class="input input-bordered"
+								placeholder="Full Name"
+							/>
+						</div>
+						<div class="flex flex-col gap-y-2">
+							<label for="email" class="font-semibold">Email Address</label>
+							<input
+								type="email"
+								id="email"
+								class="input input-bordered"
+								placeholder="example@email.com"
+							/>
+						</div>
+						<div class="flex flex-col gap-y-2">
+							<label for="fblink" class="font-semibold"
+								>Facebook Address Link</label
+							>
+							<input
+								type="url"
+								id="fblink"
+								class="input input-bordered"
+								placeholder="Facebook link"
+							/>
+						</div>
+						<div class="flex flex-col gap-y-2">
+							<label for="lnkdlink" class="font-semibold"
+								>LinkedIn Address Link</label
+							>
+							<input
+								type="url"
+								id="lnkdlink"
+								class="input input-bordered"
+								placeholder="LinkedIn link"
+							/>
+						</div>
+					</div>
+
+					<div class="flex flex-col mt-10 gap-y-2">
+						<p for="fullName" class="font-semibold">Full passport image</p>
+						<label for="img-up" class="cursor-pointer">
+							<img src="./img/img-upload.png" alt="" class="w-fit" />
+						</label>
+						<input id="img-up" type="file" class="hidden" />
+						<button
+							class="self-start px-16 normal-case shadow btn bg-base-100 rounded-xl border-base-300"
+						>
+							Upload
+						</button>
+					</div>
+
+					<div class="flex flex-col mt-10 gap-y-2">
+						<p class="font-semibold">Add Field</p>
+						<button
+							class="self-start px-32 normal-case border-base-300 hover:border-black btn bg-base-300 text-base-200"
+						>
+							Click to add more field
+						</button>
+					</div>
+
+					<button
+						class="self-start mt-10 text-white normal-case btn btn-primary"
+					>
+						<i class="bi bi-floppy"></i>
+						Save Changes
+					</button>
 				</div>
 			</div>
 		</div>

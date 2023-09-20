@@ -2,7 +2,11 @@
 module.exports = {
 	content: ['./**/*.{html,js}'],
 	theme: {
-		extend: {},
+		extend: {
+			boxShadow: {
+				DEFAULT: '0px 4px 4px 0px rgba(0, 0, 0, 0.05)',
+			},
+		},
 		screens: {
 			sm: '576px',
 			md: '768px',

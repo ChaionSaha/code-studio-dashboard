@@ -7,6 +7,7 @@
 		<title>Code Studio Dashboard</title>
 		<script defer src="./js/index.js"></script>
 	</head>
+
 	<body class="min-h-screen bg-base-300">
 		<div class="container flex mx-auto">
 			<!-- Sidebar  -->
@@ -30,7 +31,7 @@
 					>
 						Main menu
 					</p>
-					<a href="./index.html" class="sidebar-link active-sidebar-link">
+					<a href="./index.html" class="sidebar-link">
 						<i class="bi bi-house"></i>
 						Dashboard</a
 					>
@@ -43,7 +44,7 @@
 						Team</a
 					>
 
-					<a href="./Testimonial.html" class="sidebar-link">
+					<a href="./Testimonial.html" class="sidebar-link active-sidebar-link">
 						<i class="bi bi-file-earmark-text"></i>
 						Testimonial</a
 					>
@@ -72,7 +73,7 @@
 					class="flex flex-col justify-between py-5 border-b gap-y-5 lg:flex-row px-7 bg-base-100"
 				>
 					<div class="flex items-center justify-between">
-						<h2 class="text-2xl font-extrabold">Dashboard</h2>
+						<h2 class="text-2xl font-extrabold">Testimonial</h2>
 
 						<button class="btn btn-outline xl:hidden" onclick="sidebarToggle()">
 							<i class="text-2xl text-base-200 bi bi-list"></i>
@@ -101,11 +102,96 @@
 				</div>
 
 				<!-- table section -->
-				<div class="flex flex-col px-5 mt-10 xl:px-10">
-					<h1 class="text-3xl font-bold text-center xl:text-5xl">
-						Welcome to <span class="text-primary"> Code </span>
-						<span class="text-[#B31412]">Studio</span> Dashboard
-					</h1>
+				<div class="flex flex-col px-5 mt-5 xl:px-10">
+					<a
+						href="./AddTestimonial.html"
+						class="normal-case bg-transparent btn xl:self-end border-success hover:bg-success hover:text-white text-base-200"
+					>
+						Add Testimonial
+						<i class="text-xl bi bi-plus"></i>
+					</a>
+
+					<div class="mt-10 bg-base-100 rounded-xl">
+						<div class="overflow-x-auto bg-base-100">
+							<table class="table table-lg border-[#d1d1d1]">
+								<!-- head -->
+								<thead>
+									<tr class="border-[#E9E7FD] uppercase">
+										<th>name</th>
+										<th>email address</th>
+										<th>phone number</th>
+										<th>created</th>
+										<th>message</th>
+										<th>action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="border-[#E9E7FD]">
+										<td class="h-full font-bold gap-x-2">
+											<img
+												class="inline-block me-2"
+												src="./img/Avatar.png"
+												alt=""
+											/>
+											Chaion
+										</td>
+										<td>chaion@gmail.com</td>
+										<td class="items-center">+880123456789</td>
+										<td>6 April, 2023</td>
+										<td class="border h-36 w-44">
+											<textarea class="w-full h-full italic">
+Your message
+</textarea
+											>
+										</td>
+										<td class="text-base-200">
+											<a
+												class="btn hover:text-black btn-sm btn-outline lg:btn-ghost"
+											>
+												<i class="text-xl bi bi-pencil-square"></i>
+											</a>
+											<button
+												class="mt-2 btn hover:text-black btn-sm btn-outline lg:mt-0 lg:btn-ghost"
+											>
+												<i class="text-xl bi bi-lock"></i>
+											</button>
+											<button
+												class="mt-2 btn hover:text-black btn-sm btn-outline lg:mt-0 lg:btn-ghost"
+											>
+												<i class="text-xl bi bi-trash"></i>
+											</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div
+							class="flex flex-col items-center justify-between p-5 mt-16 lg:flex-row gap-y-5"
+						>
+							<p class="flex items-center text-base-200 gap-x-2">
+								Showing
+								<select class="text-black select select-sm select-bordered">
+									<option>10</option>
+									<option>20</option>
+									<option>30</option>
+								</select>
+								of 50
+							</p>
+							<div class="join gap-x-1">
+								<button class="page">
+									<i class="bi bi-chevron-left"></i>
+								</button>
+								<button class="page page-active">1</button>
+								<button class="page">2</button>
+								<button class="page">3</button>
+								<button class="page">4</button>
+								<button class="page">
+									<i class="bi bi-chevron-right"></i>
+								</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

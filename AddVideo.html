@@ -7,6 +7,7 @@
 		<title>Code Studio Dashboard</title>
 		<script defer src="./js/index.js"></script>
 	</head>
+
 	<body class="min-h-screen bg-base-300">
 		<div class="container flex mx-auto">
 			<!-- Sidebar  -->
@@ -30,7 +31,7 @@
 					>
 						Main menu
 					</p>
-					<a href="./index.html" class="sidebar-link active-sidebar-link">
+					<a href="./index.html" class="sidebar-link">
 						<i class="bi bi-house"></i>
 						Dashboard</a
 					>
@@ -47,7 +48,7 @@
 						<i class="bi bi-file-earmark-text"></i>
 						Testimonial</a
 					>
-					<a href="./Video.html" class="sidebar-link">
+					<a href="./Video.html" class="sidebar-link active-sidebar-link">
 						<i class="bi bi-film"></i>
 						Video</a
 					>
@@ -65,14 +66,14 @@
 
 			<!-- Main body section -->
 			<div
-				class="flex flex-col w-full overflow-y-auto xl:px-0 xl:w-[80%] bg-base-300"
+				class="flex flex-col w-full pb-10 overflow-y-auto xl:px-0 xl:w-[80%] bg-base-300"
 			>
 				<!-- header name section -->
 				<div
 					class="flex flex-col justify-between py-5 border-b gap-y-5 lg:flex-row px-7 bg-base-100"
 				>
 					<div class="flex items-center justify-between">
-						<h2 class="text-2xl font-extrabold">Dashboard</h2>
+						<h2 class="text-2xl font-extrabold">Video</h2>
 
 						<button class="btn btn-outline xl:hidden" onclick="sidebarToggle()">
 							<i class="text-2xl text-base-200 bi bi-list"></i>
@@ -100,12 +101,70 @@
 					</div>
 				</div>
 
-				<!-- table section -->
-				<div class="flex flex-col px-5 mt-10 xl:px-10">
-					<h1 class="text-3xl font-bold text-center xl:text-5xl">
-						Welcome to <span class="text-primary"> Code </span>
-						<span class="text-[#B31412]">Studio</span> Dashboard
-					</h1>
+				<div class="flex flex-col mt-10 px-7">
+					<h2 class="text-2xl font-semibold">Upload Video</h2>
+					<div class="flex mt-5">
+						<input type="file" id="vid-up" class="hidden" />
+						<label for="vid-up" class="cursor-pointer">
+							<img src="./img/upload-video.png" class="w-fit" alt="" />
+						</label>
+					</div>
+					<p class="mt-10 font-bold text-base-200">Uploading - 3/3 files</p>
+					<div class="flex flex-col mt-5 lg:w-1/2 gap-y-3">
+						<p
+							class="flex items-center justify-between py-7 input input-bordered"
+						>
+							your-file-name.pdf
+							<i class="cursor-pointer bi bi-x-circle-fill text-base-200"></i>
+						</p>
+						<div class="w-[60%] h-2 bg-primary rounded-lg"></div>
+					</div>
+					<div class="flex flex-col mt-0 gap-y-3 lg:w-1/2">
+						<p class="mt-10 font-bold text-base-200 gap-y-5">Uploaded</p>
+						<div class="flex items-stretch gap-x-5">
+							<p
+								class="flex items-center w-[60%] justify-between border-secondary py-7 input input-bordered"
+							>
+								your-file-name.pdf
+								<i class="cursor-pointer bi bi-x-circle-fill text-base-200"></i>
+							</p>
+							<button
+								class="h-full normal-case bg-transparent btn rounded-xl border-base-200 hover:bg-base-200 hover:text-white"
+							>
+								Rename
+							</button>
+							<button
+								class="h-full normal-case bg-transparent hover:bg-error hover:text-white text-error btn rounded-xl border-error"
+							>
+								Delete
+							</button>
+						</div>
+						<div class="flex items-stretch gap-x-5">
+							<p
+								class="flex items-center w-[60%] justify-between border-secondary py-7 input input-bordered"
+							>
+								your-file-name.pdf
+								<i class="cursor-pointer bi bi-x-circle-fill text-base-200"></i>
+							</p>
+							<button
+								class="h-full normal-case bg-transparent btn rounded-xl border-base-200 hover:bg-base-200 hover:text-white"
+							>
+								Rename
+							</button>
+							<button
+								class="h-full normal-case bg-transparent hover:bg-error hover:text-white text-error btn rounded-xl border-error"
+							>
+								Delete
+							</button>
+						</div>
+					</div>
+
+					<button
+						class="flex items-center self-start px-16 text-white normal-case mt-7 gap-x-3 btn-primary btn"
+					>
+						<i class="bi bi-cloud-arrow-up"></i>
+						Upload Video
+					</button>
 				</div>
 			</div>
 		</div>

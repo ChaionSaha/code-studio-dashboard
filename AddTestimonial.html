@@ -7,6 +7,7 @@
 		<title>Code Studio Dashboard</title>
 		<script defer src="./js/index.js"></script>
 	</head>
+
 	<body class="min-h-screen bg-base-300">
 		<div class="container flex mx-auto">
 			<!-- Sidebar  -->
@@ -30,7 +31,7 @@
 					>
 						Main menu
 					</p>
-					<a href="./index.html" class="sidebar-link active-sidebar-link">
+					<a href="./index.html" class="sidebar-link">
 						<i class="bi bi-house"></i>
 						Dashboard</a
 					>
@@ -43,7 +44,7 @@
 						Team</a
 					>
 
-					<a href="./Testimonial.html" class="sidebar-link">
+					<a href="./Testimonial.html" class="sidebar-link active-sidebar-link">
 						<i class="bi bi-file-earmark-text"></i>
 						Testimonial</a
 					>
@@ -72,7 +73,7 @@
 					class="flex flex-col justify-between py-5 border-b gap-y-5 lg:flex-row px-7 bg-base-100"
 				>
 					<div class="flex items-center justify-between">
-						<h2 class="text-2xl font-extrabold">Dashboard</h2>
+						<h2 class="text-2xl font-extrabold">Add Testimonial</h2>
 
 						<button class="btn btn-outline xl:hidden" onclick="sidebarToggle()">
 							<i class="text-2xl text-base-200 bi bi-list"></i>
@@ -100,12 +101,58 @@
 					</div>
 				</div>
 
-				<!-- table section -->
-				<div class="flex flex-col px-5 mt-10 xl:px-10">
-					<h1 class="text-3xl font-bold text-center xl:text-5xl">
-						Welcome to <span class="text-primary"> Code </span>
-						<span class="text-[#B31412]">Studio</span> Dashboard
-					</h1>
+				<div class="flex flex-col pb-10 mt-10 px-7">
+					<div class="flex flex-col mt-10 gap-y-2">
+						<p for="fullName" class="font-semibold">Profile Picture</p>
+						<img src="./img/Profile-pic.png" alt="" class="w-fit" />
+					</div>
+
+					<div class="flex flex-col gap-y-2 mt-7">
+						<label for="fullName" class="font-semibold">Name</label>
+						<input
+							type="text"
+							id="fullName"
+							class="w-1/3 input input-bordered focus:border-primary focus:outline-none"
+							placeholder="Demo name"
+						/>
+					</div>
+
+					<div class="flex flex-col gap-y-2 mt-7">
+						<label for="text" class="font-semibold">Text</label>
+						<textare
+							type="text"
+							id="text"
+							class="w-1/2 textarea textarea-bordered focus:border-primary focus:outline-none"
+							>Hello! to the table win survival strategy ensure to proactive
+							domination At the end of the day, going forward new normal that
+							has evolved from user generated content will have touch points
+							shoring hanging fruits to identify a ballpark value-added activity
+							to beta.</textare
+						>
+					</div>
+
+					<div class="flex flex-col gap-y-2 mt-7">
+						<label for="fullName" class="font-semibold">From</label>
+						<input
+							type="text"
+							id="fullName"
+							class="w-1/3 input input-bordered focus:border-primary focus:outline-none"
+							placeholder="Dhaka"
+						/>
+					</div>
+					<div class="flex gap-x-2">
+						<button
+							class="self-start mt-10 text-white normal-case btn btn-primary"
+						>
+							Update
+						</button>
+
+						<button
+							class="self-start mt-10 normal-case border-transparent hover:border-base-200 text-base-200 btn bg-base-300"
+						>
+							Reset
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
