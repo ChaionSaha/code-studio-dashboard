@@ -37,3 +37,11 @@
 .page-active {
 	@apply text-white bg-success;
 }
+
+.custom-tab-active {
+	@apply text-2xl font-semibold cursor-pointer  border-t-4  duration-150 border-[#280559] text-[#280559];
+}
+
+.active-tab-content {
+	@apply flex flex-col;
+}

@@ -35,7 +35,7 @@
 						<i class="bi bi-house"></i>
 						Dashboard</a
 					>
-					<a href="./Gallery.html" class="sidebar-link">
+					<a href="./Gallery.html" class="sidebar-link active-sidebar-link">
 						<i class="bi bi-globe"></i>
 						Gallery</a
 					>
@@ -48,7 +48,7 @@
 						<i class="bi bi-file-earmark-text"></i>
 						Testimonial</a
 					>
-					<a href="./Video.html" class="sidebar-link active-sidebar-link">
+					<a href="./Video.html" class="sidebar-link">
 						<i class="bi bi-film"></i>
 						Video</a
 					>
@@ -73,7 +73,7 @@
 					class="flex flex-col justify-between py-5 border-b gap-y-5 lg:flex-row px-7 bg-base-100"
 				>
 					<div class="flex items-center justify-between">
-						<h2 class="text-2xl font-extrabold">Video</h2>
+						<h2 class="text-2xl font-extrabold">Add Gallery</h2>
 
 						<button class="btn btn-outline xl:hidden" onclick="sidebarToggle()">
 							<i class="text-2xl text-base-200 bi bi-list"></i>
@@ -103,79 +103,83 @@
 
 				<!-- table section -->
 				<div class="flex flex-col px-5 mt-5 xl:px-10">
-					<a
-						href="./AddVideo.html"
-						class="normal-case bg-transparent btn xl:self-end border-success hover:bg-success hover:text-white text-base-200"
+					<div
+						class="flex items-center justify-between px-10 bg-base-100 rounded-3xl"
 					>
-						Add video
-						<i class="text-xl bi bi-plus"></i>
-					</a>
-
-					<div class="mt-10 bg-base-100 rounded-xl">
-						<div class="overflow-x-auto bg-base-100">
-							<table class="table table-lg border-[#d1d1d1]">
-								<!-- head -->
-								<thead>
-									<tr class="border-[#E9E7FD] uppercase">
-										<th>video name</th>
-										<th>created</th>
-										<th>video link</th>
-
-										<th>action</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="border-[#E9E7FD]">
-										<td class="h-full font-bold gap-x-2">Demo Name</td>
-										<td class="items-center">6 April, 2023</td>
-										<td>Demo link</td>
-										<td class="text-base-200">
-											<a
-												class="btn hover:text-black btn-sm btn-outline lg:btn-ghost"
-											>
-												<i class="text-xl bi bi-pencil-square"></i>
-											</a>
-											<button
-												class="mt-2 btn hover:text-black btn-sm btn-outline lg:mt-0 lg:btn-ghost"
-											>
-												<i class="text-xl bi bi-lock"></i>
-											</button>
-											<button
-												class="mt-2 btn hover:text-black btn-sm btn-outline lg:mt-0 lg:btn-ghost"
-											>
-												<i class="text-xl bi bi-trash"></i>
-											</button>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<div
-							class="flex flex-col items-center justify-between p-5 mt-16 lg:flex-row gap-y-5"
-						>
-							<p class="flex items-center text-base-200 gap-x-2">
-								Showing
-								<select class="text-black select select-sm select-bordered">
-									<option>10</option>
-									<option>20</option>
-									<option>30</option>
-								</select>
-								of 50
+						<div class="flex gap-x-10">
+							<p
+								class="py-10 text-2xl font-semibold cursor-pointer text-base-200 border-t-4 border-transparent duration-150 hover:border-[#280559] hover:text-[#280559] custom-tab custom-tab-active"
+								data-target="gallery"
+							>
+								Photo Gallery
 							</p>
-							<div class="join gap-x-1">
-								<button class="page">
-									<i class="bi bi-chevron-left"></i>
-								</button>
-								<button class="page page-active">1</button>
-								<button class="page">2</button>
-								<button class="page">3</button>
-								<button class="page">4</button>
-								<button class="page">
-									<i class="bi bi-chevron-right"></i>
-								</button>
-							</div>
+							<p
+								class="py-10 text-2xl font-semibold cursor-pointer text-base-200 border-t-4 border-transparent duration-150 hover:border-[#280559] hover:text-[#280559] custom-tab"
+								data-target="collaborate"
+							>
+								Let's Collaborate
+							</p>
 						</div>
+					</div>
+
+					<div class="tab-content active-tab-content" id="gallery">
+						<div class="flex flex-col gap-y-2 mt-7">
+							<label for="fullName" class="font-semibold">Name</label>
+							<input
+								type="text"
+								id="fullName"
+								class="w-1/3 input input-bordered focus:border-primary focus:outline-none"
+								placeholder="Demo name"
+							/>
+						</div>
+						<div class="flex flex-col mt-10 gap-y-2">
+							<p for="fullName" class="font-semibold">Full passport image</p>
+							<label for="img-up" class="cursor-pointer">
+								<img src="./img/img-upload.png" alt="" class="w-fit" />
+							</label>
+							<input id="img-up" type="file" class="hidden" />
+							<button
+								class="self-start px-16 normal-case shadow btn bg-base-100 rounded-xl border-base-300"
+							>
+								Upload
+							</button>
+						</div>
+						<button
+							class="self-start mt-20 text-white normal-case btn btn-primary"
+						>
+							<i class="bi bi-floppy"></i>
+							Save Changes
+						</button>
+					</div>
+
+					<div class="hidden tab-content" id="collaborate">
+						<div class="flex flex-col gap-y-2 mt-7">
+							<label for="fullName" class="font-semibold">Name</label>
+							<input
+								type="text"
+								id="fullName"
+								class="w-1/3 input input-bordered focus:border-primary focus:outline-none"
+								placeholder="Demo name"
+							/>
+						</div>
+						<div class="flex flex-col mt-10 gap-y-2">
+							<p for="fullName" class="font-semibold">Full passport image</p>
+							<label for="img-up" class="cursor-pointer">
+								<img src="./img/img-upload.png" alt="" class="w-fit" />
+							</label>
+							<input id="img-up" type="file" class="hidden" />
+							<button
+								class="self-start px-16 normal-case shadow btn bg-base-100 rounded-xl border-base-300"
+							>
+								Upload
+							</button>
+						</div>
+						<button
+							class="self-start mt-20 text-white normal-case btn btn-primary"
+						>
+							<i class="bi bi-floppy"></i>
+							Save Changes
+						</button>
 					</div>
 				</div>
 			</div>
